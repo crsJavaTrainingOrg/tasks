@@ -1,0 +1,13 @@
+import becker.robots.*;
+
+public class nyomoktest
+{
+    public static void test() 
+    {
+       City ny = new City();
+       RobotSE robi = new RobotSE(ny,1,0,Direction.EAST,5);
+       Nyomok nyomok = new Nyomok(robi);
+       nyomok.nyomhatrahagyasa();
+    }
+    }
+       

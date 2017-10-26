@@ -1,0 +1,28 @@
+import becker.robots.*;
+
+
+public class Nyomok {
+	private RobotSE robi;
+	
+   
+	
+	
+	
+	public Nyomok(RobotSE robi) {
+		this.robi = robi;}
+	
+   
+	  
+	
+	public void nyomhatrahagyasa()
+	{
+	                while(robi.countThingsInBackpack()>0){
+			robi.putThing();
+			
+			robi.move();
+	
+	    
+	}
+	 
+         
+        }}

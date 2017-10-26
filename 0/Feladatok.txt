@@ -1,0 +1,72 @@
+(Remélem jól tudtam lefordítani)
+
+
+1. Írjon egy "Szamolas" osztályt amábbi az alábbi statikus metódust tartalmazza:
+
+
+public static long osszegmegadasa (int elso int utolso)
+
+amely az "elso" és "utolso" számok közötti páros számok összegét megadja.
+
+2.
+
+Írjon egy osztály 2 konstruktorral 
+
+public Automata()
+
+public Automata(int kezdoosszeg)
+
+Ezáltál létre lehet hozni egy üres automatát illetve egy automatát "Bankomat()" és egy másikat adott kezdõösszeggel.
+
+public void megtoltes(int osszeg)  metódussal fel lehet tölteni az automatát ami ezáltal megnöveli az automatában lévõ elérhetõ összeget.
+
+public int elerhetoosszeg() metódussal le lehet kérdezni mennyi összeg áll rendelkezésre.
+
+public String felvetel (int osszeg) metódussal le lehet venni adott összeget.
+
+ Ehhez a meglévõ összegnek 0-nál nagyobbnak kell lenni vagy kissebnek 
+és egyenlõnek a meglévõ összeggel. ILLETVE a bankban lévõ összegnek 10-el oszthatónak kell lennie. 
+
+Az elerhetoosszeg() metódusnak vissza kell 
+adnia hány ötvenesre, tízesre és százasra lehet felosztani a benntlévõ összeget.
+
+PL: Ha 370 van bennt akkor ezt kell visszaadnia: "Önnek 3 százasa 1 ötvenese és 2 tízese van
+pl2: Ha 230 van bennt akkor : 2 százas és 3 tízes. 
+
+Sikeres felvetelkor a fennt leírt módon "String"-ként meg kell adnia mennyit vett le. Más esetben "Sikertelen felvétel" és a 
+a benntlévõ összeg nem váltzozik.
+
+3.
+Írjon egy EgyszeruFuggvenyek osztályt ami az alábbi statikus metódust tartalmazza:
+
+public static long faktorialis(int n)
+
+amivel n!-et ki lehet számolni.
+
+Továbbá:
+
+public static double exediken (double x)
+
+amivel közelítõleg meg lehet határozni e^x értékét.
+
+Az e^x függvény értékét az alábbi sorozattal lehet megközelíteni:
+
+e^x = 1 + x + x^2/2! + x^3/3!....
+
+Az exediken metódus a 9. elemig kell hogy megadja a sorozat tagjainak értékét.
+Ebben a faktorialis metódus segítségül szolgálhat.
+
+4.
+Írjon egy Kiakarokmenni osztályt az alábbi konstruktorral:
+
+public Kiakarokmenni (RobotSE robi)
+
+ami egy írányítandó robotot (robi) egy attribútúmba menti.
+Írjon az osztályba egy getOut() metódust ami a képen látható szobából kivezényli
+a robotot. Továbbá írjon egy test() osztályt ami a képen látható módon létrehoz egy szobát benne a robottal
+és elõhívja a getOut() metódust. A kijárat nem lehet sarokban!
+
+
+
+
+
