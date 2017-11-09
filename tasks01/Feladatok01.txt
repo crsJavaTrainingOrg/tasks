@@ -1,0 +1,119 @@
+01_FELADATOK
+
+
+1.Írjon egy osztályt TestPrim ami a következõ statikus metódust tartalmazza:
+public static boolean primszamTeszt(int szam)
+
+ami leteszteli, hogy az általunk megadott (szam>=1) prímszám-e vagy sem.
+"szam" akkor NEM prímszám, ha legalább egy olyan "w" értékkel osztható amire
+igaz hogy:  2<= w <= gyök(szam). Ha  "szam" prímszám akkor a visszatérési érték igaz,
+más esetben hamis.
+
+---------------------------------------------------------------------
+
+
+
+2.
+
+Írjon egy Egyszerufuggvenyek nevû osztályt ami a következõ statikus metódust tartalmazza:
+
+public static double eX(double x, double epsilon)
+
+Az elõzõ feladatsorban már kiszámultuk ennek a numerikus sornak/sornak az értékeit
+a 9. tagig. Ez a megközelítés viszont nem pontos ezért jobb ha a sornak addig adjuk meg az értékeit
+amíg az egyik összeadandó/tag kisebb mint epsilon ami ennek megfelelõen egy nagyon kicsi szám (pl.0.000001)
+Ezen kívül az elõzõ feladatsorban úgy számoltuk ki a tagokat, hogy elõszõt i!-et majd x^i-et megadtuk.
+Ez azonban elég körülményes. Látható, hogy a "(i+1)"-edik összeadandót/tagot "(s_i+1)"-et úgy kaphatjuk meg,hogy 
+"s_i"-t a "x/(i+1)" kifejezéssel összeszorozzuk. Alkalmazza ezt a módszert a eX(double x, double epsilon) metódusban.
+
+---------------------------------------------------------------------
+
+
+
+3.
+
+Írjon egy Kör nevû osztályt az alábbi konstruktorral:
+
+public Kor(double kozeppontY, kozeppontY, double sugar)
+
+Ami elment egy kört a megadott középpontal és sugárral.
+
+A "public boolean tartalmazzaE(double x, double y)" metódusnak "true" a visszatérési értéke, ha a kör tartalmazza a 
+megadott pontot, más esetben "false". Ehhez segítség:
+
+(x-x_kör)^2+(y-y_kör)^2 <= r^2 
+
+Írjon egy másik "FeluletMegsaccolas" ami az alábbi statikus metódust tartalmazza:
+
+public static double megkozelites(Kor k, int probalkozasokSzama)
+
+ami a egy kör és egy négyzet metszetfelületét megközelítõleg meghatározza.
+A négyzet csúcsai: (0,0) (1,0) (1,1) (0,1)
+
+a megkozelites metódusnak így kell mûködnie:
+
+A Random nevû osztályban a nextDouble() metódus egy vélellenszerû számot ad meg a [0,1] intervallumból.
+
+Minden (x,y) párt ahol az x és y a kordináták értékei a nextDouble() metódussal kell meghatározni. Tehát ezek az (x,y) pontok véletlenszerû pontjai
+a fennt leírt négyzetnek. Ha sok ilyen (x,y) pontot meghatározunk akkor ezek közül valamelyik a körnek is a pontja lehet. 
+Az körben lévõ pontok és az összes létrehozott pont arányát vissza kell adni.
+
+A probalkozasokSzama paraméterben lehet elmenteni, hogy hány próba pontot tartalmaz az adott megközelítés.
+
+A (0.5,0.5) kp-ú és 0.5 sugarú körnek a megközelítési értéke pí/4.
+
+---------------------------------------------------------------------
+
+
+
+
+
+4.
+
+Írjon egy "Aranykereso" osztályt az alábbi konstruktorral:
+public AranyKereso(RobotSE robi) ami egy Robotot egy attribútúmba ment.
+
+Egy Aranykereso az alábbi dolgokat hajtja végre:
+
+public void poznaFelallitas() 
+Ezzel a metódussal az Aranykereso a Poznak-hoz megy és az ott található póznákat megszámolja(bal oldali kép).
+Kiszámolja az oldalhosszúságát annak a legnagyobb területû négyzetnek amit ezekkel a póznákkal építeni tud.
+Ezek után egy oszloppal arrébb megy kelet fele és felépíti a négyzetet.(jobb oldali kép).
+
+Írjon egy tesztosztályt TestAranykereso egy statikus metódussal ami felállít egy várost egy aranykereso-vel és végre hajtja a 
+poznaFelallitast(). A robot "robi" dél fele kell hogy nézzen (1,1) kordinátákkal. 
+(5,1) a poznak a koordinátái ahol 0-25-ig bármennyi pózna lehet.
+
+---------------------------------------------------------------------
+
+
+
+Ezek a feladatok és ami új dolog nekem azok a random számok létrehozásának a módszerei, mert több félét is tanultunk és még kicsit zavaros, hogy melyik mire jó.
+
+Pl. Random rand = new Random();
+ int x = rand.nextInt(n+1);
+
+vagy 
+
+double x = Math.random() * n;
+
+(Math.random() * )b-a));
+
+
+vagy
+
+
+
+int x = (int)
+(Math.random() * (n+1));
+
+
+
+
+
+
+
+
+
+
+ 
