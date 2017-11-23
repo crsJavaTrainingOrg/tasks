@@ -1,0 +1,134 @@
+02_FELADATOK
+----------------------------------------------------------------------------------------------------
+
+1.
+
+Írjon egy Tanulo osztályt az alábbi konstruktorral
+
+public Tanulo(String nev, String diakSzam, int jegy)
+
+és az alábbi metódusokkal:
+
+public String giveNev()
+public String giveDiakszam()
+public int giveJegy()
+
+
+
+Írjon továbbá egy Csoport osztályt az alábbi konstruktorral:
+
+public Csoport()
+
+ami létrehoz egy üres csoportot egy üres tanulólistával.
+
+A public boolean tanuloHozzaadasa(Tanulo egyTanulo) az alábbi dolgokat tudja:
+
+Hozzáad a tanulólistához egy új tanulót de megnézi, hogy a tanuló már szerepel-e a 
+listán( true a visszatérési érték ha sikeres volt a hozzáadás, más esetben false).
+Két tanuló akkor számít ugyanannak, ha a diákszámuk megegyezik. 
+A "public ArrayList<Tanulo> jegyLista()" egy ArrayList-et ad vissza amiben a pozitív jegyû
+tanulók találhatóak. (Itt nem teljesen értem mi számít pozitív jegynek, hiszen a jegy int típusú).
+----------------------------------------------------------------------------------------------------
+
+2.
+
+Írjon egy Tag osztályt az alábbi konstruktorral:
+
+public Tag(String nev, String cim, int fizetettOsszeg)
+
+és az alábbi metódusokkal:
+
+public String giveNev()
+public String giveCim()
+public int givefizetettOsszeg()
+public void fizetettOsszegbeallit(int osszeg) (új fizetettOsszeg-et állít be).
+
+
+melyek visszaadják az egyes információkat.
+
+Írjon még egy Egyesulet osztályt az alábbi konstruktorral:
+
+public Egyesulet()
+
+Ami létrehoz egy egyesületet tagok nélkül.
+
+A "public boolean tagHozzaadas(Tag egyTag)" metódus hozzáad egy tagot az egyesület taglistájához, ha 
+az adott tag még nem szerepel a listán (igaz a visszatérési érték ha a hozzáadás sikeres, más esetben hamis).
+Két tag akkor ugyanaz ha a címük és a nevük megegyezik.
+
+A "public ArrayList<Tag> kiNemFizetett(int osszeg)" egy olyan "ArrayList"-et add vissza
+amelyen azoknak a tagoknak a neve szerepel akik még nem fizették be teljesen a tagsági díjat.
+(osszeg - fizetettOsszeg > 0 ).
+
+----------------------------------------------------------------------------------------------------
+
+3.
+Írjon egy osztályt az alábbi konstruktorral:
+
+public Naplo(String nev)
+
+ami létrehoz egy naplót egy névvel. Az elején a naplónak nincsenek bejegyzései.
+Írjon egy "public void bejegyzesHozzaadas(String bejegyzes)" metódust ami egy új bejegyzést add hozzá a naplóhóz,de csak akkor
+ha a bejegyzes nem egyenlõ "null"-al és a hosszúsága legalább 10.
+
+public boolean bejegyzesFelulirasa(String regiBejegyzes, String ujBejegyzes)
+
+Ez a metódust felülírja a régi naplóbejegyzést egy új bejegyzessel és true a visszatérési értéke.
+Ha nincs mit felülírni akkor false a visszatérési értéke és a napló változatlan marad.
+
+A "public double atlagHosszusag()" metódus kiszámolja a bejegyzesek átlaghosszúságát.
+
+
+A "public ArrayList<String> utolsoBejegyzesek(int n)" visszaadja az utolsó "n" hozzáadott bejegyzéseket. Ha kevesebb bejegyzés van mint "n" akkor az összes
+bejegyzést visszaadja. Ha nincs bejegyzés akkor a metódus üres listát ad vissza.
+
+public ArrayList<String> utolsoBejegyzesek(int n).
+
+Ha szükségesnek tartja akkor más metódusokat vagy attribútumokat is hozzáadhat az osztáylhoz.
+
+---------------------------------------------------------------------------------------------------- 
+
+4.
+
+Írjon egy Konyv osztályt az alábbi konstruktorral:
+
+public Konyv(String cim, String szerzo)
+
+és az alábbi metódusokkal:
+
+public String giveCim()
+public String giveSzerzo()
+
+melyek a kért információkat visszaadják. 
+
+Írjon egy Konyvtar osztályt az alábbi konstruktorral:
+
+public Konyvtar()
+
+ami létrehoz egy könyvtárat könyvek nélkül.
+
+A "public void konyvHozzaadasa(String cim, String szerzo)" metódus egy  olyan új könyvet add hozzá a könyvtárhoz, ami nincs kikölcsönözve.
+
+A "public Konvy kolcsonzes (String titel, String szerzo)" metódus kikölcsönöz egy könyvet a könyvtárból. Ha van a könyvtárban olyan könvy ami megegyezik a 
+kölcsönözni kívánt könyv címével és szerzõjével, és még nincs kikölcsönözve, akkor a könyv ki lesz kölcsönözve és a metódus a könyvet adja vissza.
+Más esetben nem lehetséges a kölcsönzés és "null" a visszatérési érték.
+
+A "public boolean visszavisz(Konyv egyKonyv)" metódus visszaviszi a kikölcsönzött könyvet a könyvtárba. Ha a könyv nem volt kiköcslönözve akkora visszatérési érték "false".
+Más esetben "true".
+
+TANÁCS: A Konyv osztályban definiáljon egy attribútumot és egy metódust / metódusokat, ami megnézi, hogy a könyv ki van kölcsönözve vagy sem. Azt, hogy k1 és k2 ugyanaz a könyv-e, az
+alábbi módon lehet megtudni : k1 == k2. Figyeljen arra, hogy egy adott címmel és szerzõvel több könyvpéldány is lehet a könyvtárban.
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+
+ 
+
+
+
+
+
+
