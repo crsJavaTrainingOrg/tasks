@@ -1,0 +1,121 @@
+03_FELADATOK
+------------------------------------------------------------------------------------------------------------------------------------------------------
+1.
+
+Írjon egy "NapiHomerseklet" osztályt a következõ konstruktorral:
+
+public NapiHomerseklet(String datum, double homerseklet)
+
+és a következõ metódusokkal:
+
+public String getDatum()
+public double getHomerseklet()
+public void setHomerseklet(double ujHomerseklet)
+
+Írjon ezen kívül egy IdojarasAdatok osztályt egy "public IdojarasAdatok()" ami létrehoz egy üres 
+Arraylistet "homersekletlista<NapiHomerseklet>".
+
+A "public void addNap(Napihomerseklet napihomerseklet)" metódus hozzá ad a listához egy új napot de megnézi elõtte,
+hogy szerepel-e már a listában az adott nap.
+
+A "public double getKozepHomerseklet()" visszaadja a "homersekletlista"-ban szereplõ napok homersekletenek aritmetikai közepét.
+
+A "public boolean tulMeleg(NapiHomerseklet napihomerseklet)" metódus igazzal tér vissza, ha a "napihomerseklet" értéke legalább 3 fokkal,
+a középhõmérséklet felett van.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.
+
+ Írjon egy "Adotorony" osztályt az alábbi konstruktorral:
+
+public AdotTorony(String jel, double xKoordinata, double yKoordinata, int kapacitas) 
+
+Ezáltal létrehozunk egy adótornyot egy adott jelöléssel és egy koordináta rendszerben elhelyezzük az x,y 
+koordináták alapján. A kapacitás azt mutatja, hogy mennyi a maximális beszélgetés ami az adott adótornyon egyidejûleg végbemehet.
+
+Egészítse ki az  "Adotorony" oszályt a szükséges metódusokkal.
+
+
+Írjon ezen kívül egy "Halozat" osztályt amiben a "Halozat()" konstruktor egy üres hálózatot hoz létre adótornyok nélül.
+
+A "public boolean add(Adotorony adotorony)" hozzáad a hálózathot egy új adótornyot, de csak akkor ha még nincs egy adótorony ugyanazzal a "jel"-el
+a hálózatban. Ha sikeres a hozzáadás akkor "true" a visszatérési érték más esetben "false".
+
+A "public boolean addKapacitas(String jel, int pluszkapacitas)" metódus megemeli az megadott "jel"-el rendelkezõ adótorony kapacitását a megadott "pluszkapacitás"-al.
+De csak abban az esetben ha található a megadott "jel"-û adótorony a hálózaton belül. Ebben az esetben a visszatérési érték "true" más esetben "false".
+
+
+A "public int torles(int minimumKapacitas)" metódus kitöröl minden olyan adótornyot a hálózatból amelyeknek a kapacitasa a minimum alatt van.
+A kitörölt tornyok száma legyen a vissatérési érték.
+
+A "public int getBeszelgetesekSzama(double xKoordinata, double yKoordinata, double sugar)" metódus,
+visszaadja a azoknak a beszélgetéseknek a számát amelyek az megadott sugáron belül (ahol a kör kp-ja a megadott x,y Koordináta),
+ összesen lehetségesek.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.
+ 
+Írjon egy "Csapat" osztályt az alábbi konstruktorral:
+
+public Csapat(String nev)
+
+Ami létrehoz egy csapatot a megadott névvel 0 ponttal és 0 gólkülünbségge.
+
+Írjon egy "public void addPontok(int pontok)
+
+ami hozzáad a csapat pontjaihoz pontokat.
+
+A "public void changeGolkulonbseg(int golkulonbseg)" metódus megváltoztatja a csapat gólülönbségét.
+Természetesen szükség van az osztály get metódusaira is.
+
+Írjon ezen kívül egy "Tablazat" osztályt az alábbi konstruktorral:
+
+public Tablazat(ArrayList<String> csapatok), amely létrehot egy táblázatot a megadott "csapatok" nevével ahol minden csapatknak,
+0 pontja és 0 gólkülönbsége van.
+
+A "public void ertekeles(String csapat1Nev, String csapat2Nev, int gol1, int gol2)" metódus
+kiértékel egy meccset a táblázatban, ahol a megadott csapatokhoz hozzádja a gólókat (ezzel változtatva a csapat gólkülönbségén) illetve
+gyõzelem esetén a gyõztes csapat 3 pontot döntetlen esetén a csapat 1 pontot kap. Ezek után a csapatokat 
+növekvõ sorrendbe kell állítani a pontok szerint, ha pedig két csapatnak ugyanaz a pontja akkor a gólkülönbség szerint.
+
+TIPP: Ehhez egy tipp a "private void addCsapat(Csapat csapat)" metódus ami a "csapatot" a pontjai és a gólkülönbsége alapján adja hozzá a táblázathoz. Tehát elõbb ki kell törölni
+a csapatot majd utána visszatenni a megfelelõ helyre a pontjai alapján.
+
+A public ArrayList<Csapat> getTablazat() kiírja a táblázat elemeit a fennt említett módon rendezve.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.(Ezt már órán nagyjából megcsináltuk)
+
+
+Írjon egy "Gongy" osztályt az alábbi konstruktorral:
+
+public Gyongy(String szin, double keresztmetszet)
+
+ami létrehoz egy gyöngyöt a megadott színnel és keresztmetszettel. 
+
+Írjon ezen kívül egy "Nyaklánc" osztályt az alábbi konstruktorral:
+
+public Nyaklanc(String szin1, String szin2, double keresztmetszet1, double keresztmteszet2)
+
+ami létrehoz egy nyakláncot gyöngyök nélkül. Ehhez csak két féle gyöngyöt lehet hozzáfûzni mégpedig a 
+konstruktorban megadott színûeket és keresztmetszetûeket.
+
+A "public boolean addGyongy(Gyongy kovetkezo)" metódus hozzáadja a lánchoz a "kovetkezo" Gyongyot. DE csak akkor
+ha a konstruktorban megadott tulajdonságokkal egyezik illetven nem lehet ugyanolyan színû mint az elõtte lévõ Gyongy.
+Ha sikeres a hozzáfûzés akkor igazzal tér vissza más esetben false.
+
+A "public boolean ugyanannyi()" metódus "true"-val tér vissza ha a nyakláncban található 2 típusú gyöngyök száma megegyezik.
+
+A "public boolean osszecsukhato(int minimumhosszusag)" "true"-vaé tér vissza ha a lánc minimum annyi gyöngybõl áll mint amennyi meg van adva
+illetve ha az utolsó és az elsõ gyöngy különbözõ típusú. Más esetben "false".
+
+Más metódusokkal is kiegészítheti a két osztályt.
+
+
+ ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
