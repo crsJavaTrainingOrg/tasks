@@ -1,0 +1,167 @@
+04_FELADATOK
+
+------------------------------------------------------------------------------------------------------------------------------------------
+1.
+
+Írjon egy "Személy" osztályt az alábbi konstruktorral:
+
+public Személy(String nev, int kor, boolean noE)
+
+ami létrehoz egy személyt a megadott névvel korral és nemmel (Ha a "noE" true akkor egy
+a személy neme nõ más esetben férfi).
+
+További metódusok az osztályhoz:
+
+public String getName(),
+public int getKor(),
+public boolean noE() 
+
+Írjon ezen kívül egy "Tanckurzus" osztályt az alábbi konstruktorral:
+
+public Tanckurzus(int parokMaxSzama)
+
+amely kétrehoz egy tánckurzust, ahol "parokMaxSzama" a kurzusban részt vehetõ párok száma.
+Az elején a kurzusnak nincsenek résztvevõi.
+
+public boolean addPar(Szemely szemely1, Szemely szemely2)
+
+Ez a metódus hozzáad a tánckurzushoz egy párt ami szemely1-bõl és szemely2-bõl áll, de elõtte
+megnézi, hogy van-e számukra még hely a kurzusban illetve, hogy ellenkezõ nemûek-e.
+Ha sikeres a hozzáadás akkor "true" más esetben "false" a visszatérési érték.
+
+public Szemely getPartner(String nev)
+
+Ez a metódus visszaadja a "nev" névvel rendelkezõ személy párját, de csak akkor ha van ilyen név 
+a tánckurzusban. Ha nincs akkor "null"-t ad vissza. Ha több személy is van a megadott névvel a kurzusban, akkor egy tetszõlegesnek
+adja vissza a párját.
+
+public double getAtlageletkor(boolean nem)
+
+Ez a metódus visszaadja a kurzusban szereplõ azonos nemû személyek átlagéletkorát.
+Ha "true" akkor a nõi résztvevõk átlagéletkorát adja vissza, más esetben a férfiakét.
+
+TIPP: Egyik lehetõség a megoldásra az, hogy a részvevõket 2 külön listába menti.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+2.
+
+Írjon egy "Bankszamla" osztélyt az alábbi konstruktorral:
+
+public Bankszamla(String banszamlaszam, String tulajdonos, double szamlaegyenleg)
+
+Miután elolvasta az egész feladatot, gondolja át milyen metódusok vagy attribútumok kerülnek még ebben az osztályba.
+
+Írjon ezen kívül egy Bank osztályt az alábbi metódussal:
+
+public Bank()
+ ami létrehoz egy bankot bankszámák/számlák nélkül. 
+
+public boolean addBankszamla (Bankszamla bankszamla)
+
+Ez a metódus hozzáad egy bankszámlát a bank bankszámlalistájához, de csak akkor ha az adott bankszámlát
+még nem tartalmazza. "True" ha sikeres a hozzáadás, "false" ha nem. Két bankszámla akkor ugyanaz, ha a bankszámlaszám megegyezik. 
+
+public boolean bankszamlaLezarasa(String bankszamlaszam)
+
+Ez a metódus lezárja a megadott számlaszámú bankszámlát. Ha a bankszámla már nem létezik a bankban akkor "false", ha még létezik
+akkor le lesz zárva és "true" a visszatérési érték.
+
+public ArrayList<Bankszamla> bankszamlakPluszban()
+
+Ez a metódsu egy ArrayList-el tér vissza amiben szerepelnek azok a bankszámlák a bankból melyeknek pozitív az egyenlege és nincsenek 
+lezárva. (a lista nagyságának pontosan akkorának kell lennie mint az aktív, pozitív számlaegyenlegû bankszámlák száma.
+
+public Bankszamla legjobbBankszamla()
+
+ez a metódus visszaad egy nem lezárt bankszámlát amelynek a legnagyobb az számlaegyenlege. Ha nincs ilyen tulajdonságokkal rendelkezõ bankszámla 
+akkor "null" a visszatérési érték. (Ha több bankszámla van ugyanolyan számlaegyenleggel akkor egy tetszõlegest ad vissza).
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3.
+
+Írjon egy Könvy osztályt az alábbi konstruktorral:
+
+public Konyv(String szerzõ, String cim, String isbn, int oldalakSzama, boolean zsebkonyv, String nyelv)
+
+Ezáltal létrejön egy könyv a megadott ISBN-számmal és ha zsebkönyv akkor true más esetben false.
+
+Gondolja át a feladat elolvasása után, hogy még milyen metódusok vagy attribútumok kerülnek ebbe az osztályba.
+
+Írjon ezen kívül egy Konyvlista osztályt  az alábbi konstruktorral:
+
+public Konyvlista()
+
+ami létrehoz egy könyvlistát könyvek nélkül.
+
+public int nemetNyelvuZsebkonyvek() 
+ez a metódus visszaadja a németnyelvû zsebkönyvek számát. (A nyelv értéke legyen "német", a zsebkönyv meg true.)
+
+public boolean addKonyv(Konyv konyv)
+
+ez a metódus hozzáad egy könyvet a könyvlistához de elõtte megnézi, hogy van-e már ilyen könyv a listában. Két könyv akkor ugyanaz ha az ISBN számuk megegyezik.
+"true" ha sikeres a hozzáadás, más esetben "false".
+
+Ha a könyv hozzá lett adva a listához, akkor rendelkeznie kell egy árral. A könyv ára egy alapárból és egy oldalankénti
+árból áll. Az alapár [10,30] között egy vélettlenszerû érték. Az egy odal pedig 0.02 Euro. 
+
+public ArrayList<Konyv> dragaZsebkonyvek()
+
+Ez a metódus egy ArrayList-el tér vissza amiben a könyvlista 20 Euro-nál drágább zsebkönyvei szereplnek. Ennek a listának pontosan akkorának kell lenni mint azoknak
+a zsebkönyveknek a száma melyek 20-nál többe kerülnek.
+
+public Konyv egyeduliAlkotas()
+
+ez a metódus visszaad egy könyvet amely egy szerzõnek az egyedüli alkotása. Ha több ilyen könyv is van akkor egy tetszõleges könyvvel tér vissza a metódus.
+Ha nincs ilyen könyv akkor "null"-al tér vissza.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+4. 
+
+Írjon egy "Butordarab" osztályt az alábbi konstruktorral:
+
+public Butordarab(int fajtaID, double ar, int szazalek)
+
+ahol a fajtaID egy bútorfajta ID-je, az ar az ?elõállítónak az ajánlott ára?, a százalék
+azt a százalékot adja meg, hogy vásárláskor maximálisan hány százalék jöhet le az árból.
+
+Gondolja át még milyen metódusok és attribútumok kerülhetnek ebbe az osztályba.
+
+
+Írjon ezen kívül egy Butorraktak osztályt az alábbi konstruktorral:
+
+public Butorraktar(int darabszam, double mininumAr, double maximumAr)
+
+Ami létrehoz egy adatbankot a bútoroknak.  A konstruktornak a megadott darabszámámnyi bútort kell létrehoznia.
+
+A fajtaID 100001-tõl 100000+darabszam-ig fut. Az ajánlott ár legyen egy véletlenszerû ár [minimumAr, maximumAr] között. A szazalek egy egész véletlenszerû szám [10,30] között.
+
+
+public ArrayList<Butordarab> olcsoButorok(double olcso)
+
+ez a metódus egy ArrayList-et add vissza ami tartalmazza azokat a bútorokat az adatbankból, melyek ára a megadott százalék levonása után <= olcso.
+
+
+public double atlagAr()
+
+ez a metódus visszaadja a raktarvan található összes bútor átlagárát.
+
+
+public boolean olcsokHozzaadasa(Butordarab butordarab, double árkorlát)
+
+ez a metódus hozzáad egy bútort az adatbankhoz, de csak akkor ha a fajtaID-je még nem található meg az adatbankban és az ára az árkorát alatt van.
+"True" ha sikeres a hozzáadás, más esetben "false".
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+
+
+
+
+
+
+
